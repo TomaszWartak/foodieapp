@@ -1,0 +1,47 @@
+body {
+    background: aquamarine;
+    color: black;
+    margin: 0;
+    /*margin-right: 0;
+    margin-top: 0;*/
+}
+
+#main-header {
+    background: url("../img/header-bkg.jpg") center no-repeat;
+    /*background-size: cover;*/
+    background-size: 100% auto;
+    color: white;
+    text-align: center;
+    margin: 0;
+    /*padding-bottom: 20%;*/
+    padding: 20px;
+}
+
+h1, h2 {
+    margin: 40px auto;
+}
+
+.container {
+    display:flex;
+    flex-flow: row wrap;
+    /*justify-content:center;*/
+    margin: 10px 30% 10px 30%;
+    /*margin-left: 100px;
+    margin-bottom: 10px;*/
+}
+
+.cutlery {
+    /*
+    height: 40px;
+    */
+    height: 2em;
+    margin: 5px;
+}
+
+h3 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}

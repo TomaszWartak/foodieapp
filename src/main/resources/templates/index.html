@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<html lang="pl" th:lang="${lang}"  xmlns:th="http://www.thymeleaf.org"> <!-- TH: podmiana języka poprzez użycie np. model.addAttribute("lang", "es") -->
 <head>
     <meta charset="UTF-8">
     <title>?????</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}"> <!-- TH: adresowanie względne -->
+    <script src="script1.js"></script>  <!-- jeśli ma być wykonany przed załadowaniem strony-->
 </head>
 <body>
-<h1>?????</h1>
-<h2 th:text="'Wylosowana liczba to: ' + ${randomNumber}"></h2>
-<p>
-    Losowaliśmy liczbę z przedziału
-    <span th:text="${from}"></span> <span th:text="${to}"></span>
-</p>
+    <header>
+        <div id="main-header">
+            <h1>Foodie</h1>
+            <h2>Witaj w naszej resturacji. Zamawiaj co chcesz i ile chcesz, a my przygotujemy to dla Ciebie </h2>
+        </div>
+    </header>
+    <div class="container" th:each="item, status: ${items}" th:object="${item}">
+        <img class="cutlery" th:src="@{/img/cutlery.svg}" alt="Ikona sztućców" title="Ikona sztućów">
+        <div>
+            <h3 th:text="|*{name} (*{price} zł)|">PIZZA</h3>
+            <p th:text="*{shortDescription}">Najlepsza pizza na świecie</p>
+        </div>
+    </div>
 </body>
 </html>
