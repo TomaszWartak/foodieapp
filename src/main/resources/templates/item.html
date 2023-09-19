@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pl" th:lang="${lang}"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Foodie</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body>
+    <div th:object="${item}">
+        <img class="dish-large" th:src="@{*{pictureAddress}}" th:alt="*{name}" th:title="*{name}">
+        <h2 th:text="|*{name} (*{price} zł)|">PIZZA</h2>
+        <p th:text="*{description}">Najlepsza pizza na świecie</p>
+    </div>
+</body>
+</html>

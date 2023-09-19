@@ -45,3 +45,11 @@ h3 {
 p {
     margin: 0;
 }
+
+.dish {
+    height: 10em;
+}
+
+.dish-large {
+    width: 25%;
+}

@@ -17,7 +17,7 @@ public class HomeController {
     }
 
     @GetMapping("/")
-    public String home(Model model) {
+    public String showHomeView(Model model) {
         List items = itemRepository.findAll();
         model.addAttribute( "items", items);
         return "index";

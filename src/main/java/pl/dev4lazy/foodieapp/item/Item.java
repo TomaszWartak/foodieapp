@@ -12,6 +12,7 @@ public class Item {
     private String shortDescription;
     @Column(length = 1024)
     private String description;
+    private String pictureAddress;
 
     public Long getId() {
         return id;
@@ -51,6 +52,14 @@ public class Item {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getPictureAddress() {
+        return pictureAddress;
+    }
+
+    public void setPictureAddress(String pictureAddress) {
+        this.pictureAddress = pictureAddress;
     }
 
     @Override
