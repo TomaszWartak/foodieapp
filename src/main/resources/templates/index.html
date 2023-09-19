@@ -11,6 +11,7 @@
         <div id="main-header">
             <h1>Foodie</h1>
             <h2>Witaj w naszej resturacji. Zamawiaj co chcesz i ile chcesz, a my przygotujemy to dla Ciebie </h2>
+            <a th:href="@{/zamowienie}">Twoje zamówienie</a>
         </div>
     </header>
     <div class="container" th:each="item, status: ${items}" th:object="${item}">
@@ -20,7 +21,10 @@
                 <h3 th:text="|*{name} (*{price} zł)|">PIZZA</h3>
             </a>
             <p th:text="*{shortDescription}">Najlepsza pizza na świecie</p>
-            <img class="dish" th:src="*{pictureAddress}" th:alt="*{name}" th:title="*{name}">
+            <img class="dish_image" th:src="*{pictureAddress}" th:alt="*{name}" th:title="*{name}">
+            <a href="#" th:href="@{/zamowienie/dodaj(itemId=${item.id})}" class="button">
+                Dodaj do zamówienia
+            </a>
         </div>
     </div>
 </body>

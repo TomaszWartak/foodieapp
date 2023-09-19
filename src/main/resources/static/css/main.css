@@ -46,10 +46,28 @@ p {
     margin: 0;
 }
 
-.dish {
+.dish_image {
     height: 10em;
 }
 
-.dish-large {
+.dish-image-large {
     width: 25%;
+}
+
+/* Stylizacja przycisku */
+.button {
+    display: block;
+    padding: 10px 20px; /* Wielkość przycisku */
+    background-color: #007bff; /* Kolor tła przycisku */
+    color: #fff; /* Kolor tekstu na przycisku */
+    text-decoration: none; /* Usunięcie domyślnego podkreślenia linku */
+    border: none; /* Usunięcie obramowania przycisku */
+    border-radius: 4px; /* Zaokrąglenie rogów przycisku */
+    cursor: pointer; /* Zmień kursor na wskaźnik */
+    width: 10em;
+}
+
+/* Efekt hover */
+.button:hover {
+    background-color: #0056b3; /* Zmiana koloru tła przycisku po najechaniu kursorem */
 }

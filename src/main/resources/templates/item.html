@@ -7,9 +7,12 @@
 </head>
 <body>
     <div th:object="${item}">
-        <img class="dish-large" th:src="@{*{pictureAddress}}" th:alt="*{name}" th:title="*{name}">
+        <img class="dish-image-large" th:src="@{*{pictureAddress}}" th:alt="*{name}" th:title="*{name}">
         <h2 th:text="|*{name} (*{price} zł)|">PIZZA</h2>
         <p th:text="*{description}">Najlepsza pizza na świecie</p>
+        <a href="#" th:href="@{/zamowienie/dodaj(itemId=${item.id})}" class="button">
+            Dodaj do zamówienia
+        </a>
     </div>
 </body>
 </html>
