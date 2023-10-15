@@ -63,7 +63,7 @@ public class Order {
         this.status = status;
     }
 
-    @Override
+    /*@Override
     public String toString() {
         return "Order{" +
                 "id=" + id +
@@ -72,5 +72,5 @@ public class Order {
                 ", telephone='" + telephone + '\'' +
                 ", status=" + status +
                 '}';
-    }
+    }*/
 }

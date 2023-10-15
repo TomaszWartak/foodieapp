@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="pl" th:lang="${lang}"  xmlns:th="http://www.thymeleaf.org"> <!-- TH: podmiana języka poprzez użycie np. model.addAttribute("lang", "es") -->
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Foodie</title>
-    <link rel="stylesheet" th:href="@{/css/main.css}"> <!-- TH: adresowanie względne -->
-    <script src="script1.js"></script>  <!-- jeśli ma być wykonany przed załadowaniem strony-->
+    <title>Generator liczb</title>
 </head>
 <body>
     <header>
         <div id="main-header">
             <h1>Foodie</h1>
-            <h2>Witaj w naszej resturacji. Zamawiaj co chcesz i ile chcesz, a my przygotujemy to dla Ciebie </h2>
-            <a th:href="@{/basket}">Twój koszyk</a>
+            <h2>Zamówienia</h2>
         </div>
     </header>
+    <div>
+
+    </div>
     <div class="container" th:each="item, status: ${items}" th:object="${item}">
         <img class="cutlery" th:src="@{/img/cutlery.svg}" alt="Ikona sztućców" title="Ikona sztućów">
         <div>

@@ -1,4 +1,4 @@
-package pl.dev4lazy.foodieapp.controllers;
+package pl.dev4lazy.foodieapp;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

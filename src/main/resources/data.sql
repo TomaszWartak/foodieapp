@@ -15,7 +15,7 @@ VALUES
      'Masz ochodę na coś słodkiego? Ta propozycja to nasza interpretacja jednego z najbardziej rozpoznawalnych włoskich' ||
      'deserów. Przygotowujemy go ze śmietanki BIO, świeżego mleka i prawdziwej wanilii. Na życzenie deser podajemy ' ||
      'w alternatywnej wersji z sosem czekoladowym.', '/img/pannacotta.jpg');
-INSERT INTO
+/*INSERT INTO
     client_order(id, address, telephone, status)
 VALUES
     (1, 'Zakrzewskiego 23/5, 50-225 Wrocław', '888777666', 'NEW'),
@@ -42,3 +42,4 @@ VALUES
     (5, 4),
     (6, 4),
     (6, 4);
+*/

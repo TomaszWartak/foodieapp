@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl" th:lang="${lang}"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <header>
+        <div id="main-header">
+            <h1>Foodie</h1>
+            <h2>Twój koszyk </h2>
+            <a th:href="@{/}">Strona główna</a>
+        </div>
+    </header>
+    <main>
+        <div th:if="${!order.items.isEmpty()}">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nazwa</th>
+                        <th>Cena</th>
+                    </tr>
+                </thead>
+                <tbody th:remove="all-but-first">
+                    <tr th:each="item, idx: ${order.items}" th:object="${item}">
+                        <td th:text="${idx.index+1}">...1</td>
+                        <td th:text="|*{name} zł|">...PIZZA</td>
+                        <td th:text="|*{price} zł|">...0 zł</td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>...Spaghetti Bolognese</td>
+                        <td>...0zł</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>...Panna Cotta</td>
+                        <td>...0zł</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!--suma-->
+            <h5 th:text="|Do zapłaty: ${#numbers.formatDecimal(sum,1,2,'COMMA')}zł|">Do zapłaty: 99.99zł</h5>
+            <p th:text="${order.getAddress()}">Adres</p>
+            <p th:text="${order.getTelephone()}">Adres</p>
+            <form action="#" th:action="@{/order/finalize}" method="post">
+                <div>
+                    <label for="addressInput">Adres</label>
+                    <input type="text" class="form-control" id="addressInput" name="address" placeholder="ul. Krzycka 28, 50-230 Wrocław">
+                </div>
+                <div>
+                    <label for="telephoneInput">Telefon</label>
+                    <input type="text" class="form-control" id="telephoneInput" name="telephone" placeholder="888-999-777">
+                </div>
+                <div>
+                    <button class="btn btn-primary">Zamów</button>
+                </div>
+            </form>
+        </div>
+        <div th:if="${order.items.isEmpty()}">
+            Twój koszyk jest pusty!
+            <a href="#" th:href="@{/}">Dodaj coś do zamówienia</a>
+        </div>
+    </main>
+</body>
+</html>
